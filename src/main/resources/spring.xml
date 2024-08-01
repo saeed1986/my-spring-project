@@ -7,7 +7,10 @@
 
     <bean id="alien1" class="com.example.Alien" autowire="byName">
         <property name="age" value="21"></property>
-<!--        <property name="com" ref="lap1"></property>-->
+        <property name="com">
+            <bean id="com" class="com.example.Laptop">
+            </bean>
+        </property>
         <!--		<constructor-arg value="21"></constructor-arg>
                 <constructor-arg ref="lap1"></constructor-arg> -->
 
@@ -20,7 +23,4 @@
 <!--        <constructor-arg name="comp" ref="lap1"/>-->
 <!--        <constructor-arg name="age" value="21"/>-->
     </bean>
-    <bean id="com" class="com.example.Laptop">
-    </bean>
-
 </beans>
